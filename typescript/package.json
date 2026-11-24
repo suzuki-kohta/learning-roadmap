@@ -1,0 +1,24 @@
+{
+  "name": "typescript-nodejs-textbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeScript & モダン Node.js 実践教科書・演習リポジトリ",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test:exercises": "node --test exercises/exercises.test.ts",
+    "test:solutions": "USE_SOLUTIONS=1 node --test exercises/exercises.test.ts",
+    "test:projects": "node --test projects/cli-todo/store.test.ts projects/rest-api/server.test.ts",
+    "test:projects:tsx": "tsx --test projects/cli-todo/store.test.ts projects/rest-api/server.test.ts",
+    "cli": "node projects/cli-todo/cli.ts",
+    "api": "node projects/rest-api/server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.2"
+  }
+}

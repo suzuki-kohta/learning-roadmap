@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    // --- 言語とランタイム環境 ---
+    "target": "ES2023",
+    "lib": ["ES2023"],
+    "types": ["node"],
+
+    // --- モジュール設定（モダン Node.js ESM） ---
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "verbatimModuleSyntax": true,
+    "allowImportingTsExtensions": true,
+
+    // --- 出力設定（型チェック専用。実行は Node.js ネイティブ実行または tsx を使用） ---
+    "noEmit": true,
+
+    // --- 厳格な型チェック（実務推奨レベル） ---
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // --- 開発体験・パフォーマンス ---
+    "skipLibCheck": true
+  },
+  "include": [
+    "examples/**/*.ts",
+    "exercises/**/*.ts",
+    "projects/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
